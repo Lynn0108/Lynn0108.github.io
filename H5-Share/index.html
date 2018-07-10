@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <meta itemprop="name" content="这是分享的标题"/> -->
+  <!-- <meta itemprop="image" content="http://imgcache.qq.com/qqshow/ac/v4/global/logo.png" /> -->
+  <!-- <meta name="description" itemprop="description" content="这是要分享的内容" /> -->
+  <title>wechat share test</title>
+  <style>
+    .share {
+      width: 200px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <button class="share">分享到微信</button>
+  <!-- <script type="text/javascript" src="http://172.24.29.53:8080/target/target-script-min.js#anonymous"></script> -->
+  <script type="text/javascript" src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.0.0/vconsole.min.js"></script>
+  <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+  <!-- QQ浏览器分享 -->
+  <script type="text/javascript" src="https://jsapi.qq.com/get?api=app.share"></script>
+  <!-- QQ内置浏览器 -->
+  <script type="text/javascript" src="//open.mobile.qq.com/sdk/qqapi.js"></script>
+  <script type="text/javascript" src="http://g.alicdn.com/dingding/open-develop/1.9.0/dingtalk.js"></script>
+  <script type="text/javascript" src="lib/wx-share.js"></script>
+  <script>
+    var vConsole = new VConsole();
+    var wxShare = new WxShare();
+    var shareConfig = {
+      title: "分享",
+      desc: "分享测试",
+      // imgUrl: "./111.JPG",
+      imgUrl: "https://goo.gl/images/dzB6Q3",
+      link: location.href
+    };
+    document.querySelector('.share').addEventListener('click', function() {
+      wxShare.setShareDate(shareConfig).share();
+    })
+  </script>
+</body>
+</html>
