@@ -99,7 +99,7 @@ function QQMobileBrowser(data) {
 
 // QQ内置浏览器
 function QQIos(data) {
-  mqq.data.setShareInfo({
+  window.mqq.data.setShareInfo({
     title: data.title,
     desc: data.desc,
     image_url: data.imgUrl,
